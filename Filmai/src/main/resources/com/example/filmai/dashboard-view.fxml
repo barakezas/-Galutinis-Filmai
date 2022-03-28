@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.filmai.controller.DashboardController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1280.0" minWidth="10.0" prefWidth="1280.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <Pane styleClass="LoginRegisterbutton" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="filmsTableView" prefHeight="629.0" prefWidth="949.0">
+                    <columns>
+                      <TableColumn fx:id="idColumn" prefWidth="42.0" text="ID" />
+                      <TableColumn fx:id="titleColumn" prefWidth="206.0" text="Filmo pavadinimas" />
+                        <TableColumn fx:id="secondsColumn" prefWidth="79.0" text="Trukmė" />
+                        <TableColumn fx:id="actorsColumn" prefWidth="186.0" text="Aktoriai" />
+                        <TableColumn fx:id="directorColumn" prefWidth="190.0" text="Režisierius" />
+                        <TableColumn fx:id="yearColumn" prefWidth="76.0" text="Metai" />
+                        <TableColumn fx:id="userIdCollumn" prefWidth="167.0" text="Vartotojo ID" />
+                    </columns>
+                  </TableView>
+               </children></Pane>
+         </center>
+         <left>
+            <Pane prefHeight="629.0" prefWidth="331.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="idField" layoutX="43.0" layoutY="49.0" prefHeight="35.0" prefWidth="240.0" promptText="ID">
+                     <font>
+                        <Font size="13.0" />
+                     </font></TextField>
+                  <TextField fx:id="titleField" layoutX="43.0" layoutY="95.0" prefHeight="35.0" prefWidth="240.0" promptText="FILMO PAVADINIMAS">
+                     <font>
+                        <Font size="13.0" />
+                     </font></TextField>
+                  <TextField fx:id="secondsField" layoutX="43.0" layoutY="141.0" prefHeight="35.0" prefWidth="240.0" promptText="FILMO TRUKMĖ">
+                     <font>
+                        <Font size="13.0" />
+                     </font></TextField>
+                  <Label layoutX="43.0" layoutY="196.0" text="Aktoriai" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Label>
+                  <CheckBox fx:id="checkBoxJohn" layoutX="43.0" layoutY="220.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="170.0" text="John Lasseter" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="checkBoxAndrew" layoutX="43.0" layoutY="248.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="170.0" text="Andrew Stanton" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="checkBoxPete" layoutX="43.0" layoutY="276.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="170.0" text="Pete Docter" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <Label layoutX="43.0" layoutY="315.0" text="Režisierius" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="radioButtonAndrew" layoutX="43.0" layoutY="366.0" mnemonicParsing="false" text="Andrew Stanton" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="Variants" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="radioButtonJohn" layoutX="43.0" layoutY="340.0" mnemonicParsing="false" text="John Lasseter" textFill="WHITE" toggleGroup="$Variants">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="radioButtonPete" layoutX="43.0" layoutY="393.0" mnemonicParsing="false" text="Pete Docter" textFill="WHITE" toggleGroup="$Variants">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </RadioButton>
+                  <ChoiceBox fx:id="choiceBoxYear" layoutX="43.0" layoutY="458.0" prefHeight="25.0" prefWidth="240.0" />
+                  <Label fx:id="status" alignment="CENTER" layoutX="8.0" layoutY="498.0" prefHeight="19.0" prefWidth="310.0" text="" textFill="#c94e24">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Label>
+                  <Button fx:id="createButton" layoutX="45.0" layoutY="532.0" mnemonicParsing="false" onAction="#onCreateButtonClick" prefHeight="30.0" prefWidth="106.0" styleClass="LoginRegisterbutton" text="SUKURTI" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="searchButton" layoutX="177.0" layoutY="532.0" mnemonicParsing="false" onAction="#searchButtonClick" prefHeight="30.0" prefWidth="106.0" styleClass="LoginRegisterbutton" text="IEŠKOTI" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="updateButton" layoutX="47.0" layoutY="575.0" mnemonicParsing="false" onAction="#onUpdateButtonClick" prefHeight="30.0" prefWidth="106.0" styleClass="LoginRegisterbutton" text="REDAGUOTI" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="deleteButton" layoutX="177.0" layoutY="575.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" prefHeight="30.0" prefWidth="106.0" styleClass="LoginRegisterbutton" text="TRINTI" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Label layoutX="43.0" layoutY="433.0" text="Metai" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+         </left>
+         <top>
+            <Pane prefHeight="91.0" prefWidth="1008.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="570.0" layoutY="15.0" text="FILMAI" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="42.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="976.0" layoutY="46.0" text="PRISIJUNGIMO VARDAS" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="1083.0" layoutY="66.0" text="GRUPĖ" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="logOutButton" layoutX="1168.0" layoutY="7.0" mnemonicParsing="false" onAction="#onLogOutButtonClick" prefHeight="30.0" prefWidth="106.0" styleClass="LoginRegisterbutton" text="ATSIJUNGTI" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="groupLabel" alignment="CENTER" layoutX="1132.0" layoutY="65.0" prefHeight="19.0" prefWidth="142.0" styleClass="LoginRegisterbutton" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="usernameLabel" alignment="CENTER" layoutX="1132.0" layoutY="45.0" prefHeight="19.0" prefWidth="142.0" styleClass="LoginRegisterbutton" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+         </top>
+      </BorderPane>
+   </children>
+</GridPane>

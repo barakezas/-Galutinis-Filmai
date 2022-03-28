@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.filmai.controller.RegisterController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Pane>
+         <children>
+            <Label alignment="CENTER" layoutX="239.0" layoutY="49.0" prefHeight="65.0" prefWidth="153.0" text="FILMAI" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="42.0" />
+               </font></Label>
+            <Label layoutX="119.0" layoutY="129.0" prefHeight="35.0" prefWidth="134.0" text="Prisijungimo vardas:" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font></Label>
+            <Label layoutX="174.0" layoutY="185.0" text="Slaptažodis:" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font></Label>
+            <Label layoutX="113.0" layoutY="229.0" text="Patvirtinti slaptažodį:" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="188.0" layoutY="272.0" text="El. paštas:" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="reUsername" layoutX="261.0" layoutY="131.0" prefHeight="35.0" prefWidth="220.0" />
+            <PasswordField fx:id="rePassword" layoutX="261.0" layoutY="176.0" prefHeight="35.0" prefWidth="220.0" />
+            <PasswordField fx:id="reConfirmPassword" layoutX="261.0" layoutY="220.0" prefHeight="35.0" prefWidth="220.0" />
+            <TextField fx:id="reEmail" layoutX="261.0" layoutY="264.0" prefHeight="35.0" prefWidth="220.0" />
+            <Label fx:id="reLoginStatus" alignment="CENTER" contentDisplay="TOP" layoutX="101.0" layoutY="345.0" prefHeight="18.0" prefWidth="398.0" text=" " textFill="#c94e24">
+               <font>
+                  <Font name="Segoe UI" size="13.0" />
+               </font></Label>
+            <Button fx:id="reRegister" alignment="CENTER" layoutX="375.0" layoutY="365.0" mnemonicParsing="false" onAction="#reOnRegisterButtonClick" prefHeight="30.0" prefWidth="106.0" styleClass="LoginRegisterbutton" text="REGISTRUOTIS" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Label layoutX="135.0" layoutY="320.0" text="Administratorius?" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="isAdminCheckBox" layoutX="261.0" layoutY="320.0" mnemonicParsing="false" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>

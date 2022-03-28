@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.filmai.controller.LoginController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Pane>
+         <children>
+            <Label layoutX="119.0" layoutY="165.0" prefHeight="35.0" prefWidth="134.0" text="Prisijungimo vardas:" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font></Label>
+            <Label layoutX="174.0" layoutY="221.0" text="Slaptažodis:" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font></Label>
+            <TextField fx:id="username" layoutX="261.0" layoutY="167.0" prefHeight="35.0" prefWidth="220.0" />
+            <Label alignment="CENTER" layoutX="239.0" layoutY="85.0" prefHeight="65.0" prefWidth="153.0" text="FILMAI" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Bold" size="42.0" />
+               </font></Label>
+            <Label fx:id="loginStatus" alignment="CENTER" contentDisplay="TOP" layoutX="101.0" layoutY="252.0" prefHeight="18.0" prefWidth="398.0" textFill="#c94e24">
+               <font>
+                  <Font name="Segoe UI" size="13.0" />
+               </font></Label>
+            <PasswordField fx:id="password" layoutX="261.0" layoutY="212.0" prefHeight="35.0" prefWidth="220.0" />
+            <Button fx:id="login" alignment="CENTER" layoutX="188.0" layoutY="276.0" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="30.0" prefWidth="106.0" styleClass="LoginRegisterbutton" text="PRISIJUNGTI" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="user" alignment="CENTER" layoutX="312.0" layoutY="276.0" mnemonicParsing="false" onAction="#onRegisterButtonClick" prefHeight="30.0" prefWidth="106.0" styleClass="LoginRegisterbutton" text="REGISTRUOTIS" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </Pane>
+   </children>
+</GridPane>
